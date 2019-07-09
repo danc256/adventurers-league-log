@@ -6,7 +6,7 @@ The purpose of this document is to get the application running as quickly as pos
 
 - Have the latest version of Docker / Docker Compose installed and ready to use
 - Clone this repo to the machine running Docker Compose
-- Create an account on (Sendgid)[https://sendgrid.com/] and have your API key handy
+- Create an account on [Sendgid](https://sendgrid.com/) and have your API key handy
 - Copy the `.env.example-docker` file to `.env`
   - Populate `SENDGRID_USERNAME` with your username (defaults to 'apikey')
   - Populate `SENDGRID_PASSWORD` with your Sendgrid API key
