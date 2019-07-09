@@ -15,10 +15,10 @@ development: &default
 development:
   <<: *default
   database: adventurers_league_log_development
-  host: <%= ENV['ALL_DATABASE_HOST'] %>
-  port: <%= ENV['ALL_DATABASE_PORT'] %>
-  username: <%= ENV['ALL_DATABASE_USERNAME'] %>
-  password: <%= ENV['ALL_DATABASE_PASSWORD'] %>
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"
 
 
 # Warning: The database defined as "test" will be erased and
@@ -27,16 +27,16 @@ development:
 test:
   <<: *default
   database: adventurers_league_log_test
-  host: <%= ENV['ALL_DATABASE_HOST'] %>
-  port: <%= ENV['ALL_DATABASE_PORT'] %>
-  username: <%= ENV['ALL_DATABASE_USERNAME'] %>
-  password: <%= ENV['ALL_DATABASE_PASSWORD'] %>
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"
 
 
 production:
   <<: *default
   database: adventurers_league_log_production
-  host: <%= ENV['ALL_DATABASE_HOST'] %>
-  port: <%= ENV['ALL_DATABASE_PORT'] %>
-  username: <%= ENV['ALL_DATABASE_USERNAME'] %>
-  password: <%= ENV['ALL_DATABASE_PASSWORD'] %>
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"
