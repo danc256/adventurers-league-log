@@ -15,10 +15,14 @@
 /db/*.sqlite3-journal
 
 # Ignore files from database container
-/tmp/db
+/tmp/
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
 
 .env
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+.idea/
