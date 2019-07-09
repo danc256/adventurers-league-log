@@ -36,7 +36,7 @@ AdventurersLeagueLog::Application.configure do
       address: 'smtp.sendgrid.net',
       user_name: ENV['SENDGRID_USERNAME'],
       password: ENV['SENDGRID_PASSWORD'],
-      domain: 'doombridge.com',
+      domain: ENV['SENDGRID_DOMAIN'],
       authentication: :plain,
       enable_starttls_auto: true
   }

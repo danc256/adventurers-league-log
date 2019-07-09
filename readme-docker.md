@@ -10,6 +10,7 @@ The purpose of this document is to get the application running as quickly as pos
 - Copy the `.env.example-docker` file to `.env`
   - Populate `SENDGRID_USERNAME` with your username (defaults to 'apikey')
   - Populate `SENDGRID_PASSWORD` with your Sendgrid API key
+  - Populate `SENDGRID_DOMAIN` with the domain from which app notification email is sent
   - Populate `DEVISE_MAILER_SENDER` with the email which notifications should come from
   - Change `ALL_DATABASE_USERNAME` and `ALL_DATABASE_PASSWORD` to more secure values (recommended but optional)
   - Change `APP_DOMAIN` to the FQDN of the host you expect to use to serve the app
