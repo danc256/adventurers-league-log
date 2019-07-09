@@ -57,11 +57,12 @@ You are going to perform a one-time initialization of the application before it 
 
 ```bash
 bundle exec rake db:create db:migrate
-bundle exec phil_columns seed -e development
+bundle exec phil_columns seed -e production
 bundle exec rake adventure_catalog:load
 bundle exec rake adventure_catalog:clean_dupes
 ```
 
+- Note that specifying 'production' for 'phil_columns' skips the creation of test users
 - CTRL-D (Exit the shell or use whatever way works for you)
 - `docker-compose down`
 
@@ -77,3 +78,4 @@ You should now be able to point a browser at the `app` container port 3000. Exam
 - Unsure why the 'production' environment must be forced during master key generation
 - Database container provisioning should probably specify the entire file and not just append to it
 - Contents of `credentials.yml.encrypted` not currently preserved during master key generation but possibly doesn't matter
+- Move security material to Docker Secrets
