@@ -3,9 +3,9 @@ development: &default
   pool: 5
   timeout: 5000
 
-
-
-
+# If database connection information isn't explicitly specified for each environment, it is pulled from the
+# environment variable 'DATABASE_URL' which in this case is expected to be a Postrgres DB URL.
+# EX:
 
 # SQLite version 3.x
 #   gem install sqlite3
@@ -15,6 +15,10 @@ development: &default
 development:
   <<: *default
   database: adventurers_league_log_development
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"
 
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +27,16 @@ development:
 test:
   <<: *default
   database: adventurers_league_log_test
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"
+
 
 production:
   <<: *default
   database: adventurers_league_log_production
+  host: "<%= ENV['ALL_DATABASE_HOST'] %>"
+  port: "<%= ENV['ALL_DATABASE_PORT'] %>"
+  username: "<%= ENV['ALL_DATABASE_USERNAME'] %>"
+  password: "<%= ENV['ALL_DATABASE_PASSWORD'] %>"

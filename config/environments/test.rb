@@ -36,5 +36,5 @@ AdventurersLeagueLog::Application.configure do
 
   config.assets.quiet = true
 
-  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  Rails.application.routes.default_url_options[:host] = "#{ENV['APP_DOMAIN']}"
 end

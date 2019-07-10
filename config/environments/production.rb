@@ -78,14 +78,14 @@ AdventurersLeagueLog::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  Rails.application.routes.default_url_options[:host] = 'adventurersleaguelog.com'
+  Rails.application.routes.default_url_options[:host] = "#{ENV['APP_DOMAIN']}"
 
   ActionMailer::Base.smtp_settings = {
     port: '587',
     address: 'smtp.sendgrid.net',
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
-    domain: 'heroku.com',
+    domain: ENV['SENDGRID_DOMAIN'],
     authentication: :plain,
     enable_starttls_auto: true
   }

@@ -28,5 +28,17 @@ AdventurersLeagueLog::Application.configure do
   config.assets.debug = true
 
   config.assets.quiet = false
-  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  Rails.application.routes.default_url_options[:host] = "#{ENV['APP_DOMAIN']}"
+
+
+  ActionMailer::Base.smtp_settings = {
+      port: '587',
+      address: 'smtp.sendgrid.net',
+      user_name: ENV['SENDGRID_USERNAME'],
+      password: ENV['SENDGRID_PASSWORD'],
+      domain: ENV['SENDGRID_DOMAIN'],
+      authentication: :plain,
+      enable_starttls_auto: true
+  }
+  ActionMailer::Base.delivery_method = :smtp
 end
